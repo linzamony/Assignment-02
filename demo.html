@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Gallery</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        .gallery {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            padding: 20px;
+        }
+
+        .thumbnail {
+            width: 150px;
+            height: 150px;
+            overflow: hidden;
+            border: 1px solid #ccc;
+            cursor: pointer;
+            transition: transform 0.3s;
+        }
+
+        .thumbnail img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .thumbnail:hover {
+            transform: scale(1.1);
+        }
+
+        .lightbox {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.8);
+            justify-content: center;
+            align-items: center;
+        }
+
+        .lightbox img {
+            max-width: 90%;
+            max-height: 80%;
+        }
+
+        .lightbox:target {
+            display: flex;
+        }
+
+        .lightbox-close {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+            z-index: 1;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="gallery">
+        <a href="#lightbox1" class="thumbnail">
+            <img src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8NGslMjBuYXR1cmV8ZW58MHx8MHx8fDA%3D&w=1000&q=80"
+                alt="Image 1">
+        </a>
+        <a href="#lightbox2" class="thumbnail">
+            <img src="https://cdn.wallpapersafari.com/87/36/vFYIGg.jpg"
+                alt="Image 2">
+        </a>
+        
+    </div>
+    <div class="lightbox" id="lightbox1">
+        <a href="#" class="lightbox-close">Close</a>
+        <img src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8NGslMjBuYXR1cmV8ZW58MHx8MHx8fDA%3D&w=1000&q=80"
+            alt="Full-sized Image 1">
+    </div>
+    <div class="lightbox" id="lightbox2">
+        <a href="#" class="lightbox-close">Close</a>
+        <img src="https://cdn.wallpapersafari.com/87/36/vFYIGg.jpg"
+            alt="Full-sized Image 2">
+    </div>
+    
+</body>
+
+</html>

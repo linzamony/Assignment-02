@@ -1,0 +1,32 @@
+body,
+h1,
+p {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #ffffff;
+}
+
+h1 {
+    font-size: 36px;
+    color: white;
+    margin: 20px;
+}
+
+p {
+    font-size: 18px;
+    color: white;
+    margin: 20px;
+    line-height: 1.5;
+}
+
+.content {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f21800;
+    font-family: "Helvetica Neue", sans-serif;
+}
